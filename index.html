@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Howsonwang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 渐变背景 + 全屏居中 */
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 柔和的蓝紫渐变，可自行调整 */
+            background: linear-gradient(135deg, #e0f7fa 0%, #f3e5f5 100%);
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* 名字样式 + 悬浮动画 */
+        .name-container {
+            font-size: clamp(2.5rem, 8vw, 5rem); /* 响应式字体大小 */
+            font-weight: 700;
+            /* 文字渐变 */
+            background: linear-gradient(90deg, #2196f3, #9c27b0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            /* 轻微阴影增加层次感 */
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* 悬浮动画过渡 */
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+            cursor: default;
+        }
+
+        /* 悬浮时轻微放大 + 增强阴影 */
+        .name-container:hover {
+            transform: scale(1.05);
+            text-shadow: 0 4px 20px rgba(33, 150, 243, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="name-container">Howsonwang</div>
+</body>
+</html>
